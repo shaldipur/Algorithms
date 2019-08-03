@@ -10,6 +10,7 @@ public class SelectionSort {
         // O(n^2): Quadratic time complexity (two loops considered n)
         // Not as much swapping as bubble sort
         // Unstable algorithm
+        // Grows sorted partition from right to left
 
         // I understand this algorithm.
 

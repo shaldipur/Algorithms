@@ -7,8 +7,11 @@ public class Test {
         //BubbleSort bubbleSort = new BubbleSort();
         //bubbleSort.bubbleSort();
 
-        SelectionSort selectionSort = new SelectionSort();
-        selectionSort.selectionSort();
+        //SelectionSort selectionSort = new SelectionSort();
+        //selectionSort.selectionSort();
+
+        InsertionSort insertionSort = new InsertionSort();
+        insertionSort.insertionSort();
 
     }
 
