@@ -11,6 +11,8 @@ public class SelectionSort {
         // Not as much swapping as bubble sort
         // Unstable algorithm
 
+        // I understand this algorithm.
+
         int[] intArray = {20, 35, -15, 7, 55, 1, -22};
 
         for (int lastUnsortedIndex = intArray.length - 1; lastUnsortedIndex > 0; lastUnsortedIndex--) {
