@@ -13,8 +13,14 @@ public class Test {
         //InsertionSort insertionSort = new InsertionSort();
         //insertionSort.insertionSort();
 
-        ShellSort shellSort = new ShellSort();
-        shellSort.shellSort();
+        //ShellSort shellSort = new ShellSort();
+        //shellSort.shellSort();
+
+        Recursion recursion = new Recursion();
+        recursion.recursiveFactorial(3);
+        //recursion.iterativeFactorial(3);
+
+
 
     }
 
