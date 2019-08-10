@@ -10,8 +10,11 @@ public class Test {
         //SelectionSort selectionSort = new SelectionSort();
         //selectionSort.selectionSort();
 
-        InsertionSort insertionSort = new InsertionSort();
-        insertionSort.insertionSort();
+        //InsertionSort insertionSort = new InsertionSort();
+        //insertionSort.insertionSort();
+
+        ShellSort shellSort = new ShellSort();
+        shellSort.shellSort();
 
     }
 
