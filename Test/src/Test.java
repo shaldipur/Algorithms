@@ -16,9 +16,11 @@ public class Test {
         //ShellSort shellSort = new ShellSort();
         //shellSort.shellSort();
 
-        Recursion recursion = new Recursion();
-        recursion.recursiveFactorial(3);
+        //Recursion recursion = new Recursion();
+        //recursion.recursiveFactorial(3);
         //recursion.iterativeFactorial(3);
+
+        MergeSort mergeSort = new MergeSort();
 
 
 
