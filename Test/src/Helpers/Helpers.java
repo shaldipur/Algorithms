@@ -1,3 +1,5 @@
+package Helpers;
+
 public class Helpers {
 
     public  int[] swap(int[] array, int i, int j) {

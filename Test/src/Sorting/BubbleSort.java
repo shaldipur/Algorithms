@@ -1,3 +1,7 @@
+package Sorting;
+
+import Helpers.Helpers;
+
 public class BubbleSort {
 
     Helpers _helpers = new Helpers();
