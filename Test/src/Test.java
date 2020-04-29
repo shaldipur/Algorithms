@@ -1,3 +1,5 @@
+import Hashtables.SimpleHashTable;
+
 import java.lang.reflect.Array;
 
 public class Test {
