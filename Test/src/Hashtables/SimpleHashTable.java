@@ -47,6 +47,31 @@ public class SimpleHashTable {
         return hashtable[hashedKey].employee;
     }
 
+    public Employee remove(String key){
+        int hashedKey = findKey(key);
+
+        if(hashedKey == -1){
+            return null;
+        }
+
+        Employee employee = hashtable[hashedKey].employee;
+        hashtable[hashedKey] = null;
+
+
+        StoredEmployee[]oldHashTable = hashtable;
+        hashtable = new StoredEmployee[oldHashTable.length];
+
+        for(int i=0; i < oldHashTable.length; i++){
+            if(oldHashTable[i] !=null){
+                put(oldHashTable[i].key, oldHashTable[i].employee);
+            }
+        }
+
+
+
+        return employee;
+    }
+
     private int hashKey(String key) {
 
         //This takes a string input and hashes it to an int
@@ -74,11 +99,12 @@ public class SimpleHashTable {
             hashedKey = (hashedKey + 1) % hashtable.length;
         }
 
-        if (stopIndex == hashedKey) {
 
-            return -1;
-        } else {
+        if(hashtable[hashedKey] != null && hashtable[hashedKey].key.equals(key)){
             return hashedKey;
+        }
+        else{
+            return -1;
         }
 
     }
@@ -93,10 +119,12 @@ public class SimpleHashTable {
                 System.out.println("empty");
             }
             else {
-                System.out.println("Position" + i + ":" + hashtable[i].employee);
+                System.out.println("Position" + i + ":" + hashtable[i].employee.getFirstName() + " " + hashtable[i].employee.getLastName() + " " + hashtable[i].employee.getId());
             }
         }
     }
+
+
 
 
 }

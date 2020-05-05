@@ -27,6 +27,14 @@ public class Test {
         ht.put("Wilson", mikeWilson);
         ht.put("Smith", marySmith);
 
+        ht.printHashtable();
+
+        System.out.println("Retrieve key Wilson: " + ht.get("Wilson"));
+        System.out.print("Retrieve key Smith: " + ht.get("Smith"));
+
+
+        ht.remove("Wilson");
+        ht.remove("Jones");
 
         ht.printHashtable();
 
