@@ -6,6 +6,11 @@ public class Employee {
     private String lastName;
     private int id;
 
+    //Prevent memory address being returned.
+    @Override
+    public String toString() {
+        return firstName + " " + lastName + " " + id;
+    }
 
     public Employee(String firstName, String lastName, int id){
         this.firstName = firstName;

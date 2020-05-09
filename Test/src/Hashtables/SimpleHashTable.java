@@ -113,7 +113,7 @@ public class SimpleHashTable {
         return hashtable[index] != null;
     }
 
-    public void printHashtable() {
+    public void printHashTable() {
         for (int i = 0; i < hashtable.length; i++) {
             if (hashtable[i] == null) {
                 System.out.println("empty");
