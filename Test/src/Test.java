@@ -1,6 +1,8 @@
 import Hashtables.ChainedHashTable;
 import Hashtables.Employee;
 import Hashtables.SimpleHashTable;
+import Sorting.MergeSort;
+import Sorting.QuickSort;
 import Trees.Tree;
 
 import java.util.HashMap;
@@ -17,33 +19,16 @@ public class Test {
 
         //Arrays and Big O Notation
 
+
+        //Sorting
+        executeSort();
+
         //Hastables
         //executeHashTables();
 
 
         //Trees
-        executeTrees();
-
-
-
-        //Sorting
-        //Sorting.BubbleSort bubbleSort = new Sorting.BubbleSort();
-        //bubbleSort.bubbleSort();
-
-        //Sorting.SelectionSort selectionSort = new Sorting.SelectionSort();
-        //selectionSort.selectionSort();
-
-        //Sorting.InsertionSort insertionSort = new Sorting.InsertionSort();
-        //insertionSort.insertionSort();
-
-        //Sorting.ShellSort shellSort = new Sorting.ShellSort();
-        //shellSort.shellSort();
-
-        //Recursion.Recursion recursion = new Recursion.Recursion();
-        //recursion.recursiveFactorial(3);
-        //recursion.iterativeFactorial(3);
-
-        //Sorting.MergeSort mergeSort = new Sorting.MergeSort(); //Left off here
+        //executeTrees();
 
 
         //Graphs, BFS and DFS
@@ -60,40 +45,52 @@ public class Test {
 
     }
 
-    private static void executeTrees(){
 
-        Tree intTree = new Tree();
-        intTree.insert(25);
-        intTree.insert(20);
-        intTree.insert(15);
-        intTree.insert(27);
-        intTree.insert(30);
-        intTree.insert(29);
-        intTree.insert(26);
-        intTree.insert(22);
-        intTree.insert(32);
+    private static void executeSort() {
+        //Sorting.BubbleSort bubbleSort = new Sorting.BubbleSort();
+        //bubbleSort.bubbleSort();
 
-        intTree.traverseInOrder();
+        //Sorting.SelectionSort selectionSort = new Sorting.SelectionSort();
+        //selectionSort.selectionSort();
+
+        //Sorting.InsertionSort insertionSort = new Sorting.InsertionSort();
+        //insertionSort.insertionSort();
+
+        //Sorting.ShellSort shellSort = new Sorting.ShellSort();
+        //shellSort.shellSort();
+
+        //Recursion.Recursion recursion = new Recursion.Recursion();
+        //recursion.recursiveFactorial(3);
+        //recursion.iterativeFactorial(3);
+
+        //MergeSort mergeSort = new MergeSort();
+        //mergeSort.executeMergeSort();
+
+        QuickSort quickSort = new QuickSort();
+        quickSort.executeQuickSort();
 
     }
 
-    private static void executeHashTables(){
+
+
+
+
+
+    private static void executeHashTables() {
         //Hashtables
         //Chaining: Linear time
 
-        Employee janeJones = new Employee("Jane","Jones",123);
+        Employee janeJones = new Employee("Jane", "Jones", 123);
         Employee johnDoe = new Employee("John", "Doe", 4567);
         Employee marySmith = new Employee("Mary", "Smith", 22);
         Employee mikeWilson = new Employee("Mike", "Wilson", 3245);
 
 
-
-
         //Use the JDK hashmap
         Map<String, Employee> hashMap = new HashMap<String, Employee>();
-        hashMap.put("Jones",janeJones);
-        hashMap.put("Doe",johnDoe);
-        hashMap.put("Smith",marySmith);
+        hashMap.put("Jones", janeJones);
+        hashMap.put("Doe", johnDoe);
+        hashMap.put("Smith", marySmith);
         //Employee employee = hashMap.put("Doe",mikeWilson);//Mike Wilson will replace John Doe
         Employee employee = hashMap.putIfAbsent("Doe", mikeWilson);
 
@@ -105,11 +102,11 @@ public class Test {
         System.out.println(hashMap.containsValue(janeJones));
 
         Iterator<Employee> iterator = hashMap.values().iterator();
-        while(iterator.hasNext()){
+        while (iterator.hasNext()) {
             System.out.println(iterator.next());
         }
 
-        hashMap.forEach((k,v) -> System.out.println("Key = " + k + ", Employee = " + v));
+        hashMap.forEach((k, v) -> System.out.println("Key = " + k + ", Employee = " + v));
 
         //Create hash table
         //SimpleHashTable ht = new SimpleHashTable();
@@ -136,4 +133,32 @@ public class Test {
 //
 //        System.out.println("Retrieve key Wilson: " + ht.get("Wilson"));
     }
+
+
+    private static void executeTrees() {
+
+        // Build the tree first
+        Tree intTree = new Tree();
+        intTree.insert(25);
+        intTree.insert(20);
+        intTree.insert(15);
+        intTree.insert(27);
+        intTree.insert(30);
+        intTree.insert(29);
+        intTree.insert(26);
+        intTree.insert(22);
+        intTree.insert(32);
+
+        // Next traverse the tree
+        // In-order traversal
+        intTree.traverseInOrder();
+
+        // Level traversal
+
+        // Pre-order traversal
+
+        // Post-order traversal
+
+    }
+
 }

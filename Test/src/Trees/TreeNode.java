@@ -6,7 +6,6 @@ public class TreeNode {
     private TreeNode leftChild;
     private TreeNode rightChild;
 
-
     public void insert(int value){
 
         if(value == data){
