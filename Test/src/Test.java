@@ -21,14 +21,14 @@ public class Test {
 
 
         //Sorting
-        executeSort();
+        //executeSort();
 
         //Hastables
         //executeHashTables();
 
 
         //Trees
-        //executeTrees();
+        executeTrees();
 
 
         //Graphs, BFS and DFS
@@ -63,11 +63,11 @@ public class Test {
         //recursion.recursiveFactorial(3);
         //recursion.iterativeFactorial(3);
 
-        //MergeSort mergeSort = new MergeSort();
-        //mergeSort.executeMergeSort();
+        MergeSort mergeSort = new MergeSort();
+        mergeSort.executeMergeSort();
 
-        QuickSort quickSort = new QuickSort();
-        quickSort.executeQuickSort();
+        //QuickSort quickSort = new QuickSort();
+        //quickSort.executeQuickSort();
 
     }
 
@@ -141,23 +141,41 @@ public class Test {
         Tree intTree = new Tree();
         intTree.insert(25);
         intTree.insert(20);
-        intTree.insert(15);
+        intTree.insert(15);//min
         intTree.insert(27);
         intTree.insert(30);
         intTree.insert(29);
         intTree.insert(26);
         intTree.insert(22);
-        intTree.insert(32);
+        intTree.insert(32);// max
 
         // Next traverse the tree
         // In-order traversal
         intTree.traverseInOrder();
+        System.out.println();
+//
+//        System.out.println(intTree.get(27));
+//        System.out.println(intTree.get(17));
+//        System.out.println(intTree.get(8888));
+
+        //Get Min and Max in binary search tree
+//        System.out.println(intTree.min());
+//        System.out.println(intTree.max());
+
+        intTree.delete(8888);
+        intTree.traverseInOrder();
+        System.out.println();
+
+
 
         // Level traversal
 
         // Pre-order traversal
 
         // Post-order traversal
+
+
+        // Implement a red black tree
 
     }
 

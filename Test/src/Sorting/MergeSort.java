@@ -25,8 +25,9 @@ public class MergeSort {
     // -Repeat until you have a single sorted array
     // -Not in place. Uses temporary arrays.
 
-    //Time complexity: n*log(n) base 2
-
+    // Time complexity: n*log(n) base 2
+    // Stable sorting algorithm
+    // Temp instances require memory
 
     public static void executeMergeSort() {
         int[] intArray = {20, 35, -15, 7, 55, 1, -22};
