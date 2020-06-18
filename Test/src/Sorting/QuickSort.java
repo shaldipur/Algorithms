@@ -27,12 +27,18 @@ public class QuickSort {
 
 
     public static void quickSort(int[] input, int start, int end) {
+
+        // If there is only a one element array then you just return. Here we have a pivot to determine this.
         if (end - start < 2) {
             return;
         }
 
         int pivotIndex = partition(input, start, end);
+
+        // Sort the left sub array
         quickSort(input, start, pivotIndex);
+
+        // Sort the right sub array
         quickSort(input, pivotIndex + 1, end);
 
     }
@@ -45,15 +51,16 @@ public class QuickSort {
         int i = start;
         int j = end;
 
+        // while i has not yet crossed j (if i > j then they i has crossed j)
         while (i < j) {
             // NOTE: Empty loop body
-            while (i < j && input[--j] >= pivot) ;
+            while (i < j && input[--j] >= pivot) ; // decrement j until j < pivot or j crosses i
             if (i < j) {
                 input[i] = input[j];
             }
 
             // NOTE: Empty loop body
-            while (i < j && input[++i] <= pivot) ;
+            while (i < j && input[++i] <= pivot) ; // increment i until i < pivot or i crosses j
             if (i < j) {
                 input[j] = input[i];
             }

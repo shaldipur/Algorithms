@@ -21,14 +21,14 @@ public class Test {
 
 
         //Sorting
-        //executeSort();
+        executeSort();
 
         //Hastables
         //executeHashTables();
 
 
         //Trees
-        executeTrees();
+        //executeTrees();
 
 
         //Graphs, BFS and DFS

@@ -56,12 +56,14 @@ public class MergeSort {
         // Sort right array
         mergeSort(input, mid, end);
 
+        // Merge the sorted array
         merge(input, start, mid, end);
 
     }
 
     public static void merge(int[] input, int start, int mid, int end) {
 
+        // Left array followed by right array? If so then return.  Here we have a midpoint to determine this.
         if (input[mid - 1] <= input[mid]) {
             return;
         }
