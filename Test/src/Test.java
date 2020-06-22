@@ -1,8 +1,6 @@
-import Hashtables.ChainedHashTable;
 import Hashtables.Employee;
-import Hashtables.SimpleHashTable;
-import Sorting.MergeSort;
-import Sorting.QuickSort;
+import SearchAlgorithms.BinarySearch;
+import SortAlgorithms.MergeSort;
 import Trees.Tree;
 
 import java.util.HashMap;
@@ -21,7 +19,10 @@ public class Test {
 
 
         //Sorting
-        executeSort();
+        //executeSort();
+
+        //Searching
+        executeSearch();
 
         //Hastables
         //executeHashTables();
@@ -63,8 +64,8 @@ public class Test {
         //recursion.recursiveFactorial(3);
         //recursion.iterativeFactorial(3);
 
-        MergeSort mergeSort = new MergeSort();
-        mergeSort.executeMergeSort();
+//        MergeSort mergeSort = new MergeSort();
+//        mergeSort.executeMergeSort();
 
         //QuickSort quickSort = new QuickSort();
         //quickSort.executeQuickSort();
@@ -72,7 +73,12 @@ public class Test {
     }
 
 
+    private static void executeSearch(){
+        BinarySearch binarySearch =  new BinarySearch();
 
+        binarySearch.executeIterativeSearch();
+
+    }
 
 
 

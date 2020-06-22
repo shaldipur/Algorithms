@@ -1,4 +1,4 @@
-package Sorting;
+package SortAlgorithms;
 
 import Helpers.Helpers;
 
