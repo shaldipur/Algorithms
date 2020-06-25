@@ -2,10 +2,7 @@ import Hashtables.Employee;
 import SearchAlgorithms.BinarySearch;
 import SortAlgorithms.MergeSort;
 import Trees.Tree;
-
-import java.util.HashMap;
-import java.util.Iterator;
-import java.util.Map;
+import java.util.*;
 
 
 public class Test {
@@ -22,7 +19,10 @@ public class Test {
         //executeSort();
 
         //Searching
-        executeSearch();
+        //executeSearch();
+
+        //Lists
+        executeLists();
 
         //Hastables
         //executeHashTables();
@@ -64,8 +64,8 @@ public class Test {
         //recursion.recursiveFactorial(3);
         //recursion.iterativeFactorial(3);
 
-//        MergeSort mergeSort = new MergeSort();
-//        mergeSort.executeMergeSort();
+       //MergeSort mergeSort = new MergeSort();
+       //mergeSort.executeMergeSort();
 
         //QuickSort quickSort = new QuickSort();
         //quickSort.executeQuickSort();
@@ -75,11 +75,84 @@ public class Test {
 
     private static void executeSearch(){
         BinarySearch binarySearch =  new BinarySearch();
-
         binarySearch.executeIterativeSearch();
-
     }
 
+    private static void executeLists(){
+        //Array Lists
+        //List<Employee> employeeList = new ArrayList<>();
+
+        //Adds a new employee to the end of the list
+//        employeeList.add(new Employee("Jane","Jones",123));
+//        employeeList.add(new Employee("John", "Doe",  4567));
+//        employeeList.add(new Employee("Mary", "Smith",22));
+//        employeeList.add(new Employee("Mike","Wilson",3245));
+
+        //Print out all employees
+        //employeeList.forEach(employee -> System.out.println(employee));
+
+        //Print out one employee
+        // Done in constant time. Time complexity doesn't depend on size of list.
+        //System.out.println(employeeList.get(1));
+
+        //See if list is empty
+        //System.out.println(employeeList.isEmpty());
+
+        //Replace an employee (setting happens in O(1) constant time)
+        //employeeList.set(1,new Employee("John","Adams",4568));
+        //employeeList.forEach(employee -> System.out.println(employee));
+
+        //Get number of items in list
+        //System.out.println(employeeList.size());
+
+        //Add to specific point in list
+//        employeeList.add(3, new Employee("John","Doe",4567));
+//        employeeList.forEach(employee -> System.out.println(employee));
+
+        //Object array (list to array)
+//        Employee[] employeeArray = employeeList.toArray(new Employee[employeeList.size()]);
+//        for(Employee employee:employeeArray){
+//            System.out.println(employee);
+//        }
+
+//        System.out.println(employeeList.contains(new Employee("Mary", "Smith", 22)));// override not working
+//        System.out.println(employeeList.indexOf(new Employee("John","Doe", 4567)));// override not working
+
+        //Remove an employee
+//        employeeList.remove(2);
+//        employeeList.forEach(employee -> System.out.println(employee));
+
+
+        //Vectors (better thread safety)
+//        List<Employee> employeeList = new Vector<>();
+//        employeeList.add(new Employee("Jane","Jones",123));
+//        employeeList.add(new Employee("John", "Doe",  4567));
+//        employeeList.add(new Employee("Mary", "Smith",22));
+//        employeeList.add(new Employee("Mike","Wilson",3245));
+//
+//        employeeList.forEach(employee -> System.out.println(employee));
+
+
+
+        //Singly Linked List
+        //Each item in the list is aware of another item in the list because they are linked.
+        //Each item in the list is called a node.
+        //The first item in the list is the head of the list.
+        //The last item always points to null because nothing comes after it.
+
+        Employee janeJones = new Employee("Jane","Jones",123);
+        Employee johnDoe = new Employee("John", "Doe",  4567);
+        Employee marySmith = new Employee("Mary", "Smith",22);
+        Employee mikeWilson = new Employee("Mike","Wilson",3245);
+
+
+
+
+        //Doubly Linked List
+
+
+
+    }
 
 
     private static void executeHashTables() {
