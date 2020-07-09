@@ -1,6 +1,7 @@
-import Hashtables.Employee;
+import Hashtables.HashEmployee;
+import Lists.ListEmployee;
+import Lists.EmployeeLinkedList;
 import SearchAlgorithms.BinarySearch;
-import SortAlgorithms.MergeSort;
 import Trees.Tree;
 import java.util.*;
 
@@ -140,12 +141,16 @@ public class Test {
         //The first item in the list is the head of the list.
         //The last item always points to null because nothing comes after it.
 
-        Employee janeJones = new Employee("Jane","Jones",123);
-        Employee johnDoe = new Employee("John", "Doe",  4567);
-        Employee marySmith = new Employee("Mary", "Smith",22);
-        Employee mikeWilson = new Employee("Mike","Wilson",3245);
+        ListEmployee janeJones = new ListEmployee("Jane","Jones",123);
+        ListEmployee johnDoe = new ListEmployee("John", "Doe",  4567);
+        ListEmployee marySmith = new ListEmployee("Mary", "Smith",22);
+        ListEmployee mikeWilson = new ListEmployee("Mike","Wilson",3245);
 
-
+        EmployeeLinkedList list = new EmployeeLinkedList();
+        list.addToFront(janeJones);
+        list.addToFront(johnDoe);
+        list.addToFront(marySmith);
+        list.addToFront(mikeWilson);
 
 
         //Doubly Linked List
@@ -159,28 +164,28 @@ public class Test {
         //Hashtables
         //Chaining: Linear time
 
-        Employee janeJones = new Employee("Jane", "Jones", 123);
-        Employee johnDoe = new Employee("John", "Doe", 4567);
-        Employee marySmith = new Employee("Mary", "Smith", 22);
-        Employee mikeWilson = new Employee("Mike", "Wilson", 3245);
+        HashEmployee janeJones = new HashEmployee("Jane", "Jones", 123);
+        HashEmployee johnDoe = new HashEmployee("John", "Doe", 4567);
+        HashEmployee marySmith = new HashEmployee("Mary", "Smith", 22);
+        HashEmployee mikeWilson = new HashEmployee("Mike", "Wilson", 3245);
 
 
         //Use the JDK hashmap
-        Map<String, Employee> hashMap = new HashMap<String, Employee>();
+        Map<String, HashEmployee> hashMap = new HashMap<String, HashEmployee>();
         hashMap.put("Jones", janeJones);
         hashMap.put("Doe", johnDoe);
         hashMap.put("Smith", marySmith);
         //Employee employee = hashMap.put("Doe",mikeWilson);//Mike Wilson will replace John Doe
-        Employee employee = hashMap.putIfAbsent("Doe", mikeWilson);
+        HashEmployee hashEmployee = hashMap.putIfAbsent("Doe", mikeWilson);
 
-        System.out.println(employee);
+        System.out.println(hashEmployee);
         System.out.println(hashMap.getOrDefault("someone", mikeWilson));
         System.out.println(hashMap.remove("Jones"));
 
         System.out.println(hashMap.containsKey("Doe"));
         System.out.println(hashMap.containsValue(janeJones));
 
-        Iterator<Employee> iterator = hashMap.values().iterator();
+        Iterator<HashEmployee> iterator = hashMap.values().iterator();
         while (iterator.hasNext()) {
             System.out.println(iterator.next());
         }

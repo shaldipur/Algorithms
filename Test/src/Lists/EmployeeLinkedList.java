@@ -4,11 +4,10 @@ public class EmployeeLinkedList {
     private EmployeeNode head;
 
 
-    public void addToFront(Employee employee){
-        EmployeeNode node = new EmployeeNode(employee);
+    public void addToFront(ListEmployee listEmployee){
+        EmployeeNode node = new EmployeeNode(listEmployee);
         node.setNext(head);
         head = node;
-
     }
 
 

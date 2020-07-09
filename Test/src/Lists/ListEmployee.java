@@ -1,14 +1,12 @@
 package Lists;
 
-import java.util.Objects;
-
-public class Employee {
+public class ListEmployee {
     private String firstName;
     private String lastName;
     private int id;
 
 
-    public Employee(String firstName, String lastName, int id) {
+    public ListEmployee(String firstName, String lastName, int id) {
         this.firstName = firstName;
         this.lastName = lastName;
         this.id = id;
@@ -44,11 +42,11 @@ public class Employee {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
 
-        Employee employee = (Employee) o;
+        ListEmployee listEmployee = (ListEmployee) o;
 
-        if (id != employee.id) return false;
-        if (!firstName.equals(employee.firstName)) return false;
-        return lastName.equals(employee.lastName);
+        if (id != listEmployee.id) return false;
+        if (!firstName.equals(listEmployee.firstName)) return false;
+        return lastName.equals(listEmployee.lastName);
     }
 
     @Override

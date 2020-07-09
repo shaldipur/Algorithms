@@ -1,6 +1,6 @@
 package Hashtables;
 
-public class Employee {
+public class HashEmployee {
 
     private String firstName;
     private String lastName;
@@ -12,7 +12,7 @@ public class Employee {
         return firstName + " " + lastName + " " + id;
     }
 
-    public Employee(String firstName, String lastName, int id){
+    public HashEmployee(String firstName, String lastName, int id){
         this.firstName = firstName;
         this.lastName = lastName;
         this.id = id;

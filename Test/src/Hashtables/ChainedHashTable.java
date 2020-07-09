@@ -18,25 +18,25 @@ public class ChainedHashTable {
 
     }
 
-    public void put(String key, Employee employee) {
+    public void put(String key, HashEmployee hashEmployee) {
         int hashedKey = hashKey(key);
-        hashtable[hashedKey].add(new StoredEmployee(key, employee));
+        hashtable[hashedKey].add(new StoredEmployee(key, hashEmployee));
     }
 
-    public Employee get(String key) {
+    public HashEmployee get(String key) {
         int hashedKey = hashKey(key);
         ListIterator<StoredEmployee> iterator = hashtable[hashedKey].listIterator();
         StoredEmployee employee = null;
         while (iterator.hasNext()) {
             employee = iterator.next();
             if (employee.key.equals(key)) {
-                return employee.employee;
+                return employee.hashEmployee;
             }
         }
         return null;
     }
 
-    public Employee remove(String key) {
+    public HashEmployee remove(String key) {
         int hashedKey = hashKey(key);
         ListIterator<StoredEmployee> iterator = hashtable[hashedKey].listIterator();
         StoredEmployee employee = null;
@@ -53,7 +53,7 @@ public class ChainedHashTable {
             return null;
         } else {
             hashtable[hashedKey].remove(index);
-            return employee.employee;
+            return employee.hashEmployee;
         }
     }
 
@@ -76,7 +76,7 @@ public class ChainedHashTable {
                 System.out.println("Position " + i + ": ");
                 ListIterator<StoredEmployee> iterator = hashtable[i].listIterator();
                 while(iterator.hasNext()){
-                    System.out.print(iterator.next().employee);
+                    System.out.print(iterator.next().hashEmployee);
                     System.out.print("-->");
                 }
                 System.out.println("null");

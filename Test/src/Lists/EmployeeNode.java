@@ -1,21 +1,21 @@
 package Lists;
 
 public class EmployeeNode {
-    private Employee employee;
+    private ListEmployee listEmployee;
     private EmployeeNode next;
 
 
-    public EmployeeNode(Employee employee){
-        this.employee = employee;
+    public EmployeeNode(ListEmployee listEmployee){
+        this.listEmployee = listEmployee;
     }
 
 
-    public Employee getEmployee() {
-        return employee;
+    public ListEmployee getListEmployee() {
+        return listEmployee;
     }
 
-    public void setEmployee(Employee employee) {
-        this.employee = employee;
+    public void setListEmployee(ListEmployee listEmployee) {
+        this.listEmployee = listEmployee;
     }
 
     public EmployeeNode getNext() {
