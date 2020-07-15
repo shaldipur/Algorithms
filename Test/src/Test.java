@@ -1,4 +1,5 @@
 import Hashtables.HashEmployee;
+import Lists.EmployeeDoublyLinkedList;
 import Lists.ListEmployee;
 import Lists.EmployeeLinkedList;
 import SearchAlgorithms.BinarySearch;
@@ -140,22 +141,37 @@ public class Test {
         //Each item in the list is called a node.
         //The first item in the list is the head of the list.
         //The last item always points to null because nothing comes after it.
+        //More memory use than arrays
 
         ListEmployee janeJones = new ListEmployee("Jane","Jones",123);
         ListEmployee johnDoe = new ListEmployee("John", "Doe",  4567);
         ListEmployee marySmith = new ListEmployee("Mary", "Smith",22);
         ListEmployee mikeWilson = new ListEmployee("Mike","Wilson",3245);
 
-        EmployeeLinkedList list = new EmployeeLinkedList();
+        //Check if list is empty before adding anything
+        //EmployeeLinkedList list = new EmployeeLinkedList(); //Single linked list
+        EmployeeDoublyLinkedList list = new EmployeeDoublyLinkedList(); //Double linked list
+        System.out.println(list.isEmpty());
+
         list.addToFront(janeJones);
         list.addToFront(johnDoe);
         list.addToFront(marySmith);
         list.addToFront(mikeWilson);
 
 
-        //Doubly Linked List
+        list.printList();
+        System.out.println(list.getSize());
 
-
+        ListEmployee billEnd = new ListEmployee("Bill", "End", 78);
+        list.addToEnd(billEnd);
+        list.printList();
+        System.out.println(list.getSize());
+        list.removeFromFront();
+        list.printList();
+        System.out.println(list.getSize());
+        list.removeFromEnd();
+        list.printList();
+        System.out.println(list.getSize());
 
     }
 

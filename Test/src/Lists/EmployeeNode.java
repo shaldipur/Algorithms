@@ -3,6 +3,7 @@ package Lists;
 public class EmployeeNode {
     private ListEmployee listEmployee;
     private EmployeeNode next;
+    private EmployeeNode previous;
 
 
     public EmployeeNode(ListEmployee listEmployee){
@@ -27,6 +28,11 @@ public class EmployeeNode {
     }
 
 
+    public EmployeeNode getPrevious() {
+        return previous;
+    }
 
-
+    public void setPrevious(EmployeeNode previous) {
+        this.previous = previous;
+    }
 }
