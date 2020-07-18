@@ -1,4 +1,5 @@
 package Hashtables;
+import Common.Employee;
 
 public class SimpleHashTable {
 
@@ -9,7 +10,7 @@ public class SimpleHashTable {
     }
 
 
-    public void put(String key, HashEmployee hashEmployee) {
+    public void put(String key, Employee employee) {
         int hashedKey = hashKey(key);
 
         //Linear probing
@@ -32,11 +33,11 @@ public class SimpleHashTable {
         if (occupied(hashedKey)) {
             System.out.println("Sorry, there's already an employee at position " + hashedKey);
         } else {
-            hashtable[hashedKey] = new StoredEmployee(key, hashEmployee);
+            hashtable[hashedKey] = new StoredEmployee(key, employee);
         }
     }
 
-    public HashEmployee get(String key) {
+    public Employee get(String key) {
 
         int hashedKey = findKey(key);
 
@@ -44,17 +45,17 @@ public class SimpleHashTable {
             return null;
         }
 
-        return hashtable[hashedKey].hashEmployee;
+        return hashtable[hashedKey].employee;
     }
 
-    public HashEmployee remove(String key){
+    public Employee remove(String key){
         int hashedKey = findKey(key);
 
         if(hashedKey == -1){
             return null;
         }
 
-        HashEmployee hashEmployee = hashtable[hashedKey].hashEmployee;
+        Employee hashEmployee = hashtable[hashedKey].employee;
         hashtable[hashedKey] = null;
 
 
@@ -63,7 +64,7 @@ public class SimpleHashTable {
 
         for(int i=0; i < oldHashTable.length; i++){
             if(oldHashTable[i] !=null){
-                put(oldHashTable[i].key, oldHashTable[i].hashEmployee);
+                put(oldHashTable[i].key, oldHashTable[i].employee);
             }
         }
 
@@ -119,7 +120,7 @@ public class SimpleHashTable {
                 System.out.println("empty");
             }
             else {
-                System.out.println("Position" + i + ":" + hashtable[i].hashEmployee.getFirstName() + " " + hashtable[i].hashEmployee.getLastName() + " " + hashtable[i].hashEmployee.getId());
+                System.out.println("Position" + i + ":" + hashtable[i].employee.getFirstName() + " " + hashtable[i].employee.getLastName() + " " + hashtable[i].employee.getId());
             }
         }
     }

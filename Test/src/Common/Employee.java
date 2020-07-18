@@ -1,12 +1,13 @@
-package Lists;
+package Common;
 
-public class ListEmployee {
+
+public class Employee {
     private String firstName;
     private String lastName;
     private int id;
 
 
-    public ListEmployee(String firstName, String lastName, int id) {
+    public Employee(String firstName, String lastName, int id) {
         this.firstName = firstName;
         this.lastName = lastName;
         this.id = id;
@@ -42,11 +43,11 @@ public class ListEmployee {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
 
-        ListEmployee listEmployee = (ListEmployee) o;
+        Common.Employee employee = (Common.Employee) o;
 
-        if (id != listEmployee.id) return false;
-        if (!firstName.equals(listEmployee.firstName)) return false;
-        return lastName.equals(listEmployee.lastName);
+        if (id != employee.id) return false;
+        if (!firstName.equals(employee.firstName)) return false;
+        return lastName.equals(employee.lastName);
     }
 
     @Override
@@ -65,10 +66,4 @@ public class ListEmployee {
                 ", id=" + id +
                 '}';
     }
-
-
-
-
-
-
 }

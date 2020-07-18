@@ -1,12 +1,14 @@
 package Lists;
 
+import Common.Employee;
+
 public class EmployeeLinkedList {
     private EmployeeNode head;
     private int size;
 
 
-    public void addToFront(ListEmployee listEmployee){
-        EmployeeNode node = new EmployeeNode(listEmployee);
+    public void addToFront(Employee employee){
+        EmployeeNode node = new EmployeeNode(employee);
         node.setNext(head);
         head = node;
         size++;

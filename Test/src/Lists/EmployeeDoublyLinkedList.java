@@ -1,4 +1,5 @@
 package Lists;
+import Common.Employee;
 
 public class EmployeeDoublyLinkedList {
     private EmployeeNode head;
@@ -6,8 +7,8 @@ public class EmployeeDoublyLinkedList {
     private int size;
 
 
-    public void addToFront(ListEmployee listEmployee){
-        EmployeeNode node = new EmployeeNode(listEmployee);
+    public void addToFront(Employee employee){
+        EmployeeNode node = new EmployeeNode(employee);
 
 
         if(head == null){
@@ -21,7 +22,7 @@ public class EmployeeDoublyLinkedList {
         size++;
     }
 
-    public void addToEnd(ListEmployee employee){
+    public void addToEnd(Employee employee){
         EmployeeNode node = new EmployeeNode(employee);
         if(tail == null){
             head = node;

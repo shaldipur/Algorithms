@@ -1,22 +1,24 @@
 package Lists;
 
+import Common.Employee;
+
 public class EmployeeNode {
-    private ListEmployee listEmployee;
+    private Employee employee;
     private EmployeeNode next;
     private EmployeeNode previous;
 
 
-    public EmployeeNode(ListEmployee listEmployee){
-        this.listEmployee = listEmployee;
+    public EmployeeNode(Employee employee){
+        this.employee = employee;
     }
 
 
-    public ListEmployee getListEmployee() {
-        return listEmployee;
+    public Employee getListEmployee() {
+        return employee;
     }
 
-    public void setListEmployee(ListEmployee listEmployee) {
-        this.listEmployee = listEmployee;
+    public void setListEmployee(Employee listEmployee) {
+        this.employee = employee;
     }
 
     public EmployeeNode getNext() {
