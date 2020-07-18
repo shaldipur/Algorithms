@@ -1,5 +1,6 @@
 import Lists.EmployeeDoublyLinkedList;
 import SearchAlgorithms.BinarySearch;
+import Stacks.*;
 import Trees.Tree;
 import Common.Employee;
 import java.util.*;
@@ -23,7 +24,7 @@ public class Test {
         //executeSearch();
 
         //Lists
-        executeLists();
+        //executeLists();
 
         //Hastables
         //executeHashTables();
@@ -41,9 +42,52 @@ public class Test {
         //Heaps
 
         //Stacks
+        executeStack();
 
         //Queues
 
+
+    }
+
+    private static void executeStack(){
+
+          //Backed by array
+//        ArrayStack arrayStack = new ArrayStack(10);
+//
+//        arrayStack.push(new Employee("Jane","Jones",123));
+//        arrayStack.push(new Employee("John","Doe",4567));
+//        arrayStack.push(new Employee("Mary","Smith",22));
+//        arrayStack.push(new Employee("Mike","Wilson",3245));
+//        arrayStack.push(new Employee("Bill","End",78));
+//
+//        System.out.println(arrayStack.peak());
+//        arrayStack.printStack();
+//
+//        System.out.println("Popped " + arrayStack.pop());
+//        System.out.println(arrayStack.peak());
+
+
+        //Backed by linked list
+        Employee janeJones = new Employee("Jane","Jones",123);
+        Employee johnDoe = new Employee("John", "Doe",  4567);
+        Employee marySmith = new Employee("Mary", "Smith",22);
+        Employee mikeWilson = new Employee("Mike","Wilson",3245);
+        Employee billEnd = new Employee("Bill","End",78);
+
+        LinkedStack linkedStack = new LinkedStack();
+
+        linkedStack.push(janeJones);
+        linkedStack.push(johnDoe);
+        linkedStack.push(marySmith);
+        linkedStack.push(mikeWilson);
+        linkedStack.push(billEnd);
+
+
+//        System.out.println(linkedStack.peek());
+//        linkedStack.printStack();
+
+        System.out.println("Popped " + linkedStack.pop());
+        System.out.println(linkedStack.peek());
 
     }
 
@@ -135,7 +179,7 @@ public class Test {
 
 
 
-        //Singly Linked List
+        //Singly and Doubly Linked List
         //Each item in the list is aware of another item in the list because they are linked.
         //Each item in the list is called a node.
         //The first item in the list is the head of the list.
